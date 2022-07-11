@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    background: #f3f3f3;
+    font-family: Nunito;
+}
+a {
+    text-decoration: none;
+    color: #1df2c0a7;
+    transition: .5s ease;
+}
+a:hover {
+    color: #0080ff;
+}
+.form {
+    background: #10285f;
+    padding: 40px;
+    max-width: 400px;
+    margin: 40px auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+.top-area {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+.top-area:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-area li a {
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    background: rgba(160, 179, 176, 0.25);
+    color: #b4c7c4;
+    font-size: 16px;
+    float: left;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.top-area li a:hover {
+    background: #2d9812;
+    color: #ffffff;
+}
+.top-area .active a {
+    background: #217e0a;
+    color: #ffffff;
+} 
+h1 {
+    text-align: center;
+    color:rgba(228, 193, 47, 0.75);
+    font-weight:normal;
+    font-size: 25px;
+    margin: 0 0 35px 0;
+}
+input, textarea, select {
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    height: 35px;
+    border-radius: 20px;
+    background: none;
+    background-image: none;
+    border: 1px solid #a0b3b0;
+    padding-left:15px;
+    color: #d9d3d3;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+option{
+    color:black;
+}
+input:focus, textarea:focus, select:focus {
+    outline: 0;
+    border-color: #1da1f2;
+    padding-left:20px;
+}
+select, select:focus{
+    padding-left:10px;
+}
+.label-field {
+    position: relative;
+    margin-bottom: 30px;
+}
+.top-row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-row > div {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+}
+.top-row > div:last-child {
+    margin: 0;
+}
+.button {
+    border: 0;
+    outline: none;
+    border-radius: 20px;
+    margin-left:90px;
+    padding: 10px 0;
+    margin-top:10px;
+    max-width: 140px;
+    font-family: Nunito;
+    font-size: 0.9rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    background: #d72929;
+    color: rgb(255, 255, 255);
+    transition: all 1s ease;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+.button:hover, .button:focus {
+    background: #217e0a;
+    font-size: 0.9rem;
+    margin-left:80px;
+    max-width: 150px;
+    transition: all 0.5s ease;
+}
+.button-block {
+    display: block;
+    width: 100%;
+}
+.forgot {
+    margin-top: 20px;
+    text-align: right;
+}
+@media (max-width: 765px) {
+    label {
+        left: 0;
+    }   
+}
