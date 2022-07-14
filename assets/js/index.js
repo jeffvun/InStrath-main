@@ -27,11 +27,11 @@ $(document).ready(function(){
                     email: email,
                     password: password,
                 },
-                url: "controllers/login.php",
+                url: "/controllers/login.php",
                 dataType: "json",
                 success: function (data) {
                     if (data.success === "success") {
-                        window.location.replace("views/home.html");
+                        window.location.replace("/views/home.html");
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
                     } 
@@ -68,11 +68,10 @@ $(document).ready(function(){
                     country: country,
                     phone: phone,
                 },
-                url: "controllers/signup.php",
+                url: "/controllers/signup.php",
                 dataType: "json",
                 success: function (resp) {
                     if (resp.success === "success") {
-                        location.replace("/views/home.html");
                         $('#login').show();
                         $('#signup').hide();
                         $('li:nth-child(2)').addClass('active');

@@ -7,6 +7,8 @@ html {
 }
 body {
     background: #f3f3f3;
+    background: url(/assets/img/grey-marble-column-details-building_1359-886.jpg) no-repeat;
+    background-size: cover;
     font-family: Nunito;
 }
 a {

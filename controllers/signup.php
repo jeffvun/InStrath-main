@@ -12,9 +12,11 @@
 
     $result=mysqli_query($conn,$sql);
     if($result){
-        echo "done"; // for ajax manipulation
+        $success='success';
+        echo "success"; // for ajax manipulation
     }
     else{
+        $success='error';
         echo "error";
     }   
 ?>
