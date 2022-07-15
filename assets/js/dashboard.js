@@ -143,8 +143,8 @@
           );
   
           //Pro purchase banner close
-          $('.purchace-popup .popup-dismiss').on('click', function(){
-            $('.purchace-popup').hide();
+          $('.popup-dismiss').on('click', function(){
+            $('.purchase-popup').hide();
           })
     });
   })(jQuery);

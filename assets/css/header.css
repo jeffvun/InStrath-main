@@ -17,13 +17,26 @@ body{
     top: 0px;
     color:white;
     background: #323030;
+    font-size: 14px;
 }
 ul{
     display:inline-flex;
+    margin-top:-30px;
 }
-li{
+.my li{
     list-style: none;
     padding-right:40px;
+    cursor:pointer;
+}
+.my li a{
+    text-decoration: none;
+    color:white;
+    text-transform: none;
+}
+li a:hover{
+    text-decoration: none;
+    color:white;
+    text-transform: none;
 }
 .nav {
     position: relative;
