@@ -55,6 +55,7 @@ $(document).ready(function(){
     });
     //sign up process
     $("#signup_btn").on("click", function(){
+        $("#signup_btn").attr("disabled", "disabled");
         var fname = $("#fname").val();
         var lname = $("#lname").val();
         var email = $("#email").val();
@@ -70,6 +71,7 @@ $(document).ready(function(){
             $.ajax({
                 method: "POST",
                 data: {
+                    type: 2,
                     fname: fname,
                     lname: lname,
                     email: email,
@@ -82,6 +84,7 @@ $(document).ready(function(){
                 success: function (dataResult) {
                     var result = JSON.parse(dataResult);
 				    if(result.statusCode==200){
+                        $("#signup_btn").removeAttr("disabled");
                         $('#login').show();
                         $('#signup').hide();
                         $('li:nth-child(2)').addClass('active');

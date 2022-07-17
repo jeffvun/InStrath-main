@@ -10,7 +10,7 @@
         $sql = "SELECT * FROM tbl_admin WHERE email='$email' AND password='$password'";
         $result = mysqli_query($conn, $sql);
 
-        if (mysqli_num_rows($result) === 1) {
+        if (mysqli_num_rows($result) == 1) {
             $row = mysqli_fetch_assoc($result);
             if ($row['email'] === $email && $row['password'] === $pass) {
                 //set session
