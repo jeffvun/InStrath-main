@@ -1,7 +1,7 @@
 <? php
     require_once 'database.php';
 
-    function getuser(){
+    function getusers(){
         $sql = "SELECT * FROM users";
         $result = $this->db->query($sql);
         return $result->result_array();

@@ -7,7 +7,6 @@
     <title>InStrath</title>
     <link rel="icon" href="https://strathmore.edu/wp-content/uploads/2016/10/cropped-coatofarms-300x300.jpg" sizes="32x32">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="assets/css/index.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
@@ -25,10 +24,10 @@
                 <h1>Welcome back !</h1>
                 <form id='login_form'>
                     <div class="label-field">
-                        <input id="email" type="email" autocomplete="off" name="email" placeholder="Example@gmail.com"/>
+                        <input id="_email" type="email" autocomplete="off" name="email" placeholder="Example@gmail.com"/>
                     </div>
                     <div class="label-field">
-                        <input id="password" type="password" autocomplete="off" name="password" placeholder="password"/>
+                        <input id="_password" type="password" autocomplete="off" name="password" placeholder="password"/>
                     </div>
                     <p class="forgot"><a href="#">Forgot Password ?</a></p>
                     <button  id="login_btn" class="button button-block">Log In</button>
@@ -46,10 +45,10 @@
                         </div>
                     </div>
                     <div class="label-field">
-                        <input id="_email" type="email"autocomplete="off" name="_email" placeholder="Example@gmail.com"/>
+                        <input id="email" type="email"autocomplete="off" name="email" placeholder="Example@gmail.com"/>
                     </div>
                     <div class="label-field">
-                        <input id="_password" type="password"autocomplete="off" name="_password" placeholder="password"/>
+                        <input id="password" type="password"autocomplete="off" name="password" placeholder="password"/>
                     </div>
                     <div class="top-row">
                         <div class="label-field">   

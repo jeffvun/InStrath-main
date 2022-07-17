@@ -1,12 +1,12 @@
 <?php
     session_start();
     require_once("../models/database.php");
-    global $conn;
 
-    if (isset($_POST['email']) && isset($_POST['password'])) {
-        $email = $_POST['email'];
-        $password = $_POST['password'];
+    if($_POST['type']==1){
+        $email = trim($_POST['email']);
+        $password = trim($_POST['password']);
 
+        global $conn;
         $sql = "SELECT * FROM tbl_admin WHERE email='$email' AND password='$password'";
         $result = mysqli_query($conn, $sql);
 
@@ -23,7 +23,12 @@
             }
         } 
         else {
-            echo json_encode(array("statusCode"=>201));
+            echo json_encode(array("statusCode"=>202));
         }
+    }
+    else{
+        echo json_encode(array("statusCode"=>401));
+        echo "<br>";
+        echo 'Current PHP version: ' . phpversion();
     }
 ?>

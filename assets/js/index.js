@@ -15,9 +15,9 @@ $(document).ready(function(){
     });
     //login process
     $("#login_btn").on("click", function () {
-        var email = $("#email").val();
-        var password = $("#password").val();
-        if (email == "" || password == "") {
+        var email = $("#_email").val();
+        var password = $("#_password").val();
+        if (email == "" || password =="") {  
             alertify.set("notifier", "position", "bottom-right");
             alertify.error("Fill in required fields.");
         } 
@@ -25,6 +25,7 @@ $(document).ready(function(){
             $.ajax({
                 method: "POST",
                 data: {
+                    type:1,
                     email: email,
                     password: password,
                 },
@@ -36,11 +37,17 @@ $(document).ready(function(){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
                         window.location.href= "/views/home.php";
+                        console.log(result.statusCode);
                     } 
-                    else if(result.statusCode==201){
+                    if (result.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
-                        alertify.error("Login Failed. Incorrect email or password.");
-                        alertify.error("If you don't have an account, Sign up");
+                        alertify.error("Incorrect email or password.");
+                        console.log(result.statusCode);
+                    }
+                    else if (result.statusCode==401){
+                        alertify.set("notifier", "position", "bottom-right");
+                        alertify.error("Login Failed.");
+                        console.log(result.statusCode);
                     }
                 },
             });
@@ -50,8 +57,8 @@ $(document).ready(function(){
     $("#signup_btn").on("click", function(){
         var fname = $("#fname").val();
         var lname = $("#lname").val();
-        var email = $("#_email").val();
-        var password = $("#_password").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
         var country = $("select#country").children("option:selected").val();
         var phone = $("#phone").val();
 
