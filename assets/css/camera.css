@@ -1,11 +1,10 @@
 #webcam-app {
-    background-image: url(/assets/img/grey-marble-column-details-building_1359-886.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: black;
-    margin-left:200px;
-    width: 70vw;
+    background-color: black; 
+    margin-top:15px;
+    width: 100vw;
     height: 100vh;
 }
 .webcam-container{
@@ -184,6 +183,7 @@
     left: 0;
     padding: 20px;
     z-index: 999999;
+    color:black;
 }
 @media screen and (min-width: 768px) {
     #errorMsg {
@@ -205,7 +205,7 @@
     background-color: black;
     background-position: center center;
     background-repeat: no-repeat;
-    background-image: url(../img/camera_flip_white.png);
+    background-image: url(/assets/img/camera_flip_white.png);
     background-size: cover;
 }
 .cameraControls {

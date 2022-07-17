@@ -7,24 +7,12 @@
     <title>InStrath</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="icon" href="https://strathmore.edu/wp-content/uploads/2016/10/cropped-coatofarms-300x300.jpg" sizes="32x32">
-    <link rel="stylesheet" href="/assets/css/header.css">
     <link rel='stylesheet' type='text/css' media='screen' href='/assets/css/camera.css'>
     <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>  
 </head>
 <body>
-    <div class="navbar">
-        <ul class="my">
-            <li><a href="https://orientation.strathmore.edu/">New Students</a></li>
-            <li><a href="https://strathmore.edu/application-process/">Apply</a></li>
-            <li><a href="https://strathmore.edu/vacancies/">Vacancies</a></li>
-            <li><a href="https://strathmore.edu/about-strathmore/">About SU</a></li>
-            <li><a href="https://opac.library.strathmore.edu/">Library</a></li>
-            <li><a href="/views/home.html">Home</a></li>
-        </ul>
-    </div>
-    <div class="nav"></div>
-    <div class="logo"></div>
     <main id="webcam-app">
+        <?php include_once("../../templates/navbar.php"); ?>
         <div class="form-control webcam-start" id="webcam-control">
                 <label class="form-switch">
                 <input type="checkbox" id="webcam-switch">
@@ -33,7 +21,7 @@
                 </label>      
                 <button id="cameraFlip" class="btn d-none"></button>                  
         </div>
-        <div id="errorMsg" class="col-12 col-md-6 alert-danger d-none">
+        <div id="errorMsg" class="col-12 col-md-6 alert-secondary d-none">
             Fail to start camera, please allow permision to access camera. <br/>
             If you are browsing through social media built in browsers, <br/>
             you would need to open the page in Sarafi (iPhone)/ Chrome (Android)<br/>
@@ -57,8 +45,6 @@
         </div>
         <div class="md-overlay"></div>
     </main>
-    <footer>
-    </footer>
     <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
     <script src="/assets/js/camera.js"></script>
 </body>

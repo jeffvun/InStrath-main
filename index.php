@@ -14,8 +14,7 @@
     <script src="assets/js/index.js"></script>
 </head>
 <body>
-    <!-- ajax header page to be loaded when requested -->
-    <div class="ajax"></div>
+    <?php include_once("views/templates/navbar.php"); ?>
     <div class="form">
         <ul class="top-area">
           <li class="tab"><a id="show_signup" href="#signup">Sign Up</a></li>
@@ -47,10 +46,10 @@
                         </div>
                     </div>
                     <div class="label-field">
-                        <input id="_email" type="email"autocomplete="off" name="email" placeholder="Example@gmail.com"/>
+                        <input id="_email" type="email"autocomplete="off" name="_email" placeholder="Example@gmail.com"/>
                     </div>
                     <div class="label-field">
-                        <input id="_password" type="password"autocomplete="off" name="password" placeholder="password"/>
+                        <input id="_password" type="password"autocomplete="off" name="_password" placeholder="password"/>
                     </div>
                     <div class="top-row">
                         <div class="label-field">   
@@ -312,3 +311,4 @@
     </div>
 </body>
 </html>
+

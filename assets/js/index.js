@@ -7,6 +7,7 @@ $(document).ready(function(){
         $('li:nth-child(1)').removeClass('active');
     });
     $('#show_signup').click(function(){
+        window.scrollTo(0, 0);
         $('#login').hide();
         $('#signup').show();
         $('li:nth-child(1)').addClass('active');
@@ -18,7 +19,7 @@ $(document).ready(function(){
         var password = $("#password").val();
         if (email == "" || password == "") {
             alertify.set("notifier", "position", "bottom-right");
-            alertify.error("Fill in all credentials.");
+            alertify.error("Fill in required fields.");
         } 
         else {
             $.ajax({
@@ -30,12 +31,13 @@ $(document).ready(function(){
                 url: "/controllers/login.php",
                 dataType: "json",
                 success: function (data) {
-                    if (data.success === "success") {
-                        window.location.replace("/views/home.html");
+                    var result = JSON.parse(data);
+                    if (result.statusCode === 200) {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
+                        window.location.href= "/views/home.php";
                     } 
-                    else {
+                    else if(result.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Login Failed. Incorrect email or password.");
                         alertify.error("If you don't have an account, Sign up");
@@ -70,8 +72,9 @@ $(document).ready(function(){
                 },
                 url: "/controllers/signup.php",
                 dataType: "json",
-                success: function (resp) {
-                    if (resp.success === "success") {
+                success: function (dataResult) {
+                    var result = JSON.parse(dataResult);
+				    if(result.statusCode==200){
                         $('#login').show();
                         $('#signup').hide();
                         $('li:nth-child(2)').addClass('active');
@@ -79,7 +82,7 @@ $(document).ready(function(){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Registered !");
                     } 
-                    else {
+                    else if(result.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Registration Failed");
                     }
