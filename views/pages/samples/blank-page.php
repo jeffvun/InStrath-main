@@ -1,9 +1,15 @@
+<?php 
+    // session_start();
+    // if(!ISSET($_SESSION['id'])){
+    //   header("Location: ../index.php");
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stellar Admin</title>
+    <title>InStrath</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="/vendors/simple-line-icons/css/simple-line-icons.css">
     <link rel="stylesheet" href="/vendors/flag-icon-css/css/flag-icon.min.css">
@@ -19,10 +25,10 @@
       <!-- partial:../../partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="navbar-brand-wrapper d-flex align-items-center">
-          <a class="navbar-brand brand-logo" href="../../home.html">
+          <a class="navbar-brand brand-logo" href="../../home.php">
             <img src="/assets/img/logo.jpg" alt="logo" class="logo-dark" />
           </a>
-          <a class="navbar-brand brand-logo-mini" href="../../home.html">
+          <a class="navbar-brand brand-logo-mini" href="../../home.php">
             <img src="/assets/img/logo-mini.jpg" alt="logo" />
           </a>
         </div>
@@ -140,7 +146,7 @@
               <span class="nav-link">Dashboard</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../home.html">
+              <a class="nav-link" href="../../home.php">
                 <span class="menu-title">Dashboard</span>
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
@@ -153,13 +159,13 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../features/face.html">Register Face</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../samples/register.html">Edit Data</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../features/face.php">Register Face</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../samples/register.php">Edit Data</a></li>
                 </ul>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../tables/basic-table.html">
+              <a class="nav-link" href="../tables/basic-table.php">
                 <span class="menu-title">Tables</span>
                 <i class="icon-grid menu-icon"></i>
               </a>
@@ -172,17 +178,17 @@
               </a>
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../../../index.html"> Login/SignUp </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../samples/register.html"> Register </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../samples/error-404.html"> 404 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../samples/error-500.html"> 500 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="../samples/blank-page.html"> Blank Page </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../../../index.php"> Login/SignUp </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../samples/register.php"> Register </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../samples/error-404.php"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../samples/error-500.php"> 500 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../samples/blank-page.php"> Blank Page </a></li>
                 </ul>
               </div>
             </li>
             <li class="nav-item pro-upgrade">
               <span class="nav-link">
-                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="../../../index.html"> <i class="icon-badge mx-2"></i>Log Out</a>
+                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="../../../index.php"> <i class="icon-badge mx-2"></i>Log Out</a>
               </span>
             </li>
           </ul>

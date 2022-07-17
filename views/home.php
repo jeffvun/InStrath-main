@@ -1,3 +1,9 @@
+<?php 
+    // session_start();
+    // if(!ISSET($_SESSION['id'])){
+    //   header("Location: ../index.php");
+    // }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -141,7 +147,7 @@
               <span class="nav-link">Dashboard</span>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="home.html">
+              <a class="nav-link" href="home.php">
                 <span class="menu-title">Dashboard</span>
                 <i class="icon-screen-desktop menu-icon"></i>
               </a>
@@ -154,13 +160,13 @@
               </a>
               <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="pages/features/face.html">Register Face</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/features/face.php">Register Face</a></li>
                   <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html">Edit Data</a></li>
                 </ul>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="pages/tables/basic-table.html">
+              <a class="nav-link" href="pages/tables/basic-table.php">
                 <span class="menu-title">Tables</span>
                 <i class="icon-grid menu-icon"></i>
               </a>
@@ -173,17 +179,17 @@
               </a>
               <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="../index.html"> Login/SignUp </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Register </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.html"> 404 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.html"> 500 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.html"> Blank Page </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="../index.php"> Login/SignUp </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/register.php"> Register </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-404.php"> 404 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/error-500.php"> 500 </a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/samples/blank-page.php"> Blank Page </a></li>
                 </ul>
               </div>
             </li>
             <li class="nav-item pro-upgrade">
               <span class="nav-link">
-                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="../index.html"> <i class="icon-badge mx-2"></i>Log Out</a>
+                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="../index.php"> <i class="icon-badge mx-2"></i>Log Out</a>
               </span>
             </li>
           </ul>

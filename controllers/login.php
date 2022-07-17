@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once("../models/database.php");
-    // global $conn;
+    global $conn;
 
     if (isset($_POST['email']) && isset($_POST['password'])) {
         $email = $_POST['email'];
@@ -25,8 +25,5 @@
         else {
             echo json_encode(array("statusCode"=>201));
         }
-    }
-    else{
-        echo json_encode(array("statusCode"=>201));
     }
 ?>

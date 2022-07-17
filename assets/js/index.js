@@ -30,9 +30,9 @@ $(document).ready(function(){
                 },
                 url: "/controllers/login.php",
                 dataType: "json",
-                success: function (data) {
-                    var result = JSON.parse(data);
-                    if (result.statusCode === 200) {
+                success: function (dataResult) {
+                    var result = JSON.parse(dataResult);
+                    if (result.statusCode==200) {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
                         window.location.href= "/views/home.php";
