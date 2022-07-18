@@ -14,12 +14,14 @@ $(document).ready(function(){
         $('li:nth-child(2)').removeClass('active');
     });
     //login process
-    $("#login_btn").on("click", function () {
+    $("#login_btn").on("click", function (e) {
+        e.preventDefault();
         var email = $("#_email").val();
         var password = $("#_password").val();
         if (email == "" || password =="") {  
             alertify.set("notifier", "position", "bottom-right");
             alertify.error("Fill in required fields.");
+            console.log(00);
         } 
         else {
             $.ajax({
@@ -33,6 +35,7 @@ $(document).ready(function(){
                 dataType: "json",
                 success: function (dataResult) {
                     var result = JSON.parse(dataResult);
+                    console.log(result);
                     if (result.statusCode==200) {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
@@ -54,8 +57,8 @@ $(document).ready(function(){
         }
     });
     //sign up process
-    $("#signup_btn").on("click", function(){
-        $("#signup_btn").attr("disabled", "disabled");
+    $("#signup_btn").on("click", function(e){
+        e.preventDefault();
         var fname = $("#fname").val();
         var lname = $("#lname").val();
         var email = $("#email").val();
@@ -84,7 +87,6 @@ $(document).ready(function(){
                 success: function (dataResult) {
                     var result = JSON.parse(dataResult);
 				    if(result.statusCode==200){
-                        $("#signup_btn").removeAttr("disabled");
                         $('#login').show();
                         $('#signup').hide();
                         $('li:nth-child(2)').addClass('active');

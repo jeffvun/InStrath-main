@@ -1,6 +1,6 @@
 <?php
     require_once("../models/database.php");
-    if($_POST['type']==2){
+    // if($_POST['type']==2){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
@@ -17,8 +17,8 @@
         else{
             echo json_encode(array("statusCode"=>201));
         }
-    }
-    else{
-        echo json_encode(array("statusCode"=>401));
-    }
+    // }
+    // else{
+    //     echo json_encode(array("statusCode"=>401));
+    // }
 ?>
