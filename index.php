@@ -22,7 +22,7 @@
         <div class="tab-content">
             <div id="login">   
                 <h1>Welcome back !</h1>
-                <form id='login_form'>
+                <form action='controllers/login.php' method='POST' id='login_form' >
                     <div class="label-field">
                         <input id="_email" type="email" autocomplete="off" name="email" placeholder="Example@gmail.com"/>
                     </div>
@@ -30,12 +30,12 @@
                         <input id="_password" type="password" autocomplete="off" name="password" placeholder="password"/>
                     </div>
                     <p class="forgot"><a href="#">Forgot Password ?</a></p>
-                    <button  id="login_btn" class="button button-block">Log In</button>
+                    <button  id="login_btn" class="button button-block" name="login">Log In</button>
                 </form>
             </div>
             <div id="signup" style="display:none"> 
                 <h1>Sign Up</h1>
-                <form id='signup_form'> 
+                <form action='controllers/signup.php' method='POST' id='signup_form'> 
                     <div class="top-row">
                         <div class="label-field">
                             <input id="fname" type="text" autocomplete="off" name="fname" placeholder="First Name"/>
@@ -303,7 +303,7 @@
                             <input id="phone" type="tel" autocomplete="off" name="phone" placeholder="0771011998"/>
                         </div>
                     </div>
-                    <button id="signup_btn" class="button button-block">Sign Up</button>
+                    <button id="signup_btn" class="button button-block" name="signup">Sign Up</button>
                 </form>
             </div>
         </div>  
