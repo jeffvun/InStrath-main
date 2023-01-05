@@ -1,6 +1,6 @@
 <?php
     require_once("../models/database.php");
-    if(isset($_POST['type'])){
+    if($_POST['type']==2){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];

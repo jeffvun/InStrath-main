@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once("../models/database.php");
-    if(isset($_POST['login'])){
+    if($_POST['type']==1){
         $email = ($_POST['email']);
         $password = ($_POST['password']);
         $sql = "SELECT * FROM tbl_admin WHERE email='$email' AND password='$password'";

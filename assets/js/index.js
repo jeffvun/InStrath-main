@@ -18,12 +18,13 @@ $(document).ready(function(){
         e.preventDefault();
         var email = $("#_email").val();
         var password = $("#_password").val();
-        if (email == "" || password =="") {  
+        console.log(email, password);
+        if (email == "" || password == "" ) {  
             alertify.set("notifier", "position", "bottom-right");
             alertify.error("Fill in required fields.");
-            console.log(00);
         } 
         else {
+            console.log("here");
             $.ajax({
                 method: "POST",
                 data: {
@@ -42,12 +43,12 @@ $(document).ready(function(){
                         window.location.href= "/views/home.php";
                         console.log(result.statusCode);
                     } 
-                    if (result.statusCode==201){
+                    else if (result.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Incorrect email or password.");
                         console.log(result.statusCode);
                     }
-                    else if (result.statusCode==401){
+                    else {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Login Failed.");
                         console.log(result.statusCode);
