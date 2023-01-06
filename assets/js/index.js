@@ -22,6 +22,7 @@ $(document).ready(function(){
         if (email == "" || password == "" ) {  
             alertify.set("notifier", "position", "bottom-right");
             alertify.error("Fill in required fields.");
+            console.log(0);
         } 
         else {
             console.log("here");
@@ -34,6 +35,7 @@ $(document).ready(function(){
                 },
                 url: "/controllers/login.php",
                 dataType: "json",
+                
                 success: function (dataResult) {
                     var result = JSON.parse(dataResult);
                     console.log(result);
