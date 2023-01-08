@@ -18,42 +18,30 @@ $(document).ready(function(){
         e.preventDefault();
         var email = $("#_email").val();
         var password = $("#_password").val();
-        console.log(email, password); 
         if (email == "" || password == "" ) {  
             alertify.set("notifier", "position", "bottom-right"); 
-            alertify.error("Fill in required fields."); 
-            console.log(0);  
+            alertify.error("Fill in required fields.");  
         } 
         else {
-            console.log("here");
             $.ajax({
                 type: "POST",
-                data: {
-                    type:1,
-                    email: email,
-                    password: password,
-                },
+                data: $(this).serialize(),
                 url: "/controllers/login.php",
                 dataType: "json",
-                
-                success: function (dataResult) {
-                    var result = JSON.parse(dataResult);
-                    console.log(result);
-                    if (result.statusCode==200) {
+                success: function (data) {
+                    console.log(data);
+                    if (data.statusCode==200) {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Login Successful.");
                         window.location.href= "/views/home.php";
-                        console.log(result.statusCode);
                     } 
-                    else if (result.statusCode==201){
+                    else if (data.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Incorrect email or password.");
-                        console.log(result.statusCode);
                     }
                     else {
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Login Failed.");
-                        console.log(result.statusCode);
                     }
                 },
             });
@@ -75,21 +63,13 @@ $(document).ready(function(){
         } 
         else {
             $.ajax({
-                method: "POST",
-                data: {
-                    type: 2,
-                    fname: fname,
-                    lname: lname,
-                    email: email,
-                    password: password,
-                    country: country,
-                    phone: phone,
-                },
+                type: "POST",
+                data: $(this).serialize(),
                 url: "/controllers/signup.php",
                 dataType: "json",
-                success: function (dataResult) {
-                    var result = JSON.parse(dataResult);
-				    if(result.statusCode==200){
+                success: function (data) {
+                    console.log(data);
+				    if(data.statusCode==200){
                         $('#login').show();
                         $('#signup').hide();
                         $('li:nth-child(2)').addClass('active');
@@ -97,7 +77,7 @@ $(document).ready(function(){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.success("Registered !");
                     } 
-                    else if(result.statusCode==201){
+                    else if(data.statusCode==201){
                         alertify.set("notifier", "position", "bottom-right");
                         alertify.error("Registration Failed");
                     }

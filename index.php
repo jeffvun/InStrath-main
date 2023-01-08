@@ -7,28 +7,11 @@
     <title>InStrath</title>
     <link rel="icon" href="https://strathmore.edu/wp-content/uploads/2016/10/cropped-coatofarms-300x300.jpg" sizes="32x32">
     <link rel="stylesheet" href="assets/css/index.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    
-    <!-- JavaScript -->
-    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
     <!-- Default theme -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
-    <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-    <!-- RTL version-->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.rtl.min.css"/>
-    <!-- Default theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.rtl.min.css"/>
-    <!-- Semantic UI theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.rtl.min.css"/>
-    <!-- Bootstrap theme -->
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.rtl.min.css"/>
-
-    <script src="assets/js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -49,7 +32,7 @@
                         <input id="_password" type="password" autocomplete="off" name="password" placeholder="password"/>
                     </div>
                     <p class="forgot"><a href="#">Forgot Password ?</a></p>
-                    <button  id="login_btn" class="button button-block">Log In</button>
+                    <button  type="submit" id="login_btn" class="button button-block" name="login_btn">Log In</button>
                 </form>
             </div>
             <div id="signup" style="display:none"> 
@@ -322,11 +305,13 @@
                             <input id="phone" type="tel" autocomplete="off" name="phone" placeholder="0771011998"/>
                         </div>
                     </div>
-                    <button id="signup_btn" class="button button-block" >Sign Up</button>
+                    <button type="submit" id="signup_btn" class="button button-block" name="signup_btn">Sign Up</button>
                 </form>
             </div>
         </div>  
     </div>
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
 

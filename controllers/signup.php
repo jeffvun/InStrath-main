@@ -1,15 +1,15 @@
 <?php
     require_once("../models/database.php");
-    if($_POST['type']==2){
+    if (isset($_POST['signup_btn'])){
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $country = $_POST['country'];
         $phone = $_POST['phone'];
-
+    
         $sql = "INSERT INTO tbl_admin(first_name, last_name, email, password, country, phone) VALUES ('$fname', '$lname','$email','$password','$country', '$phone' )";
-
+    
         $result=mysqli_query($conn,$sql);
         if($result){
             echo json_encode(array("statusCode"=>200));
