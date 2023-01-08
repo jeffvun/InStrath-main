@@ -18,16 +18,16 @@ $(document).ready(function(){
         e.preventDefault();
         var email = $("#_email").val();
         var password = $("#_password").val();
-        console.log(email, password);
+        console.log(email, password); 
         if (email == "" || password == "" ) {  
-            alertify.set("notifier", "position", "bottom-right");
-            alertify.error("Fill in required fields.");
-            console.log(0);
+            alertify.set("notifier", "position", "bottom-right"); 
+            alertify.error("Fill in required fields."); 
+            console.log(0);  
         } 
         else {
             console.log("here");
             $.ajax({
-                method: "POST",
+                type: "POST",
                 data: {
                     type:1,
                     email: email,

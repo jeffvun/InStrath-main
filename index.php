@@ -41,7 +41,7 @@
         <div class="tab-content">
             <div id="login">   
                 <h1>Welcome back !</h1>
-                <form id='login_form' >
+                <form id='login_form' method='post'>
                     <div class="label-field">
                         <input id="_email" type="email" autocomplete="off" name="email" placeholder="Example@gmail.com"/>
                     </div>
@@ -54,7 +54,7 @@
             </div>
             <div id="signup" style="display:none"> 
                 <h1>Sign Up</h1>
-                <form id='signup_form'> 
+                <form id='signup_form' method='post'> 
                     <div class="top-row">
                         <div class="label-field">
                             <input id="fname" type="text" autocomplete="off" name="fname" placeholder="First Name"/>
