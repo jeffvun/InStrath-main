@@ -1,6 +1,7 @@
 <?php
     require_once("../models/database.php");
-    if(isset($_POST['login_btn'])){
+    // session_start();
+    // if(isset($_POST['login_btn'])){
         $email = ($_POST['email']);
         $password = ($_POST['password']);
         $sql = "SELECT * FROM tbl_admin WHERE email='$email' AND password='$password'";
@@ -21,8 +22,8 @@
         else {
             echo json_encode(array("statusCode"=>202));
         }
-    }
-    else{
-        echo json_encode(array("statusCode"=>401));
-    }
+    // }
+    // else{
+    //     echo json_encode(array("statusCode"=>401));
+    // }
 ?>

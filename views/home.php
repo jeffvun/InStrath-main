@@ -1,8 +1,8 @@
 <?php 
-    // session_start();
-    // if(!ISSET($_SESSION['id'])){
-    //   header("Location: ../index.php");
-    // }
+    session_start();
+    if(!ISSET($_SESSION['id'])){
+      header("Location: ../index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
